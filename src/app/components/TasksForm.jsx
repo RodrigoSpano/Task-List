@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { chakra, Input, Textarea, Stack, Heading, Button, Flex } from '@chakra-ui/react'
+import { chakra, Input, Textarea, Stack, Heading, Button, Flex, Text } from '@chakra-ui/react'
 import {v4 as uuid} from 'uuid'
 import { useSelector, useDispatch } from 'react-redux'
 import { addTask, editTask } from '../features/tasks/tasksSlice'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, Link } from 'react-router-dom'
 
 export const TasksForm = () => {
 
@@ -53,6 +53,7 @@ export const TasksForm = () => {
           <Textarea onChange={handleChange} name='description' placeholder='Task Description..' _placeholder={{color: 'gray.100'}}/>
         </Flex>
         <Button type='submit' _hover={{color: 'gray.200', bgColor: 'gray.800'}}>Create</Button>
+        <Link to={'/'}><Text color='gray.200'> ⬅Back </Text></Link>
       </chakra.form>
     </Stack>
   )
