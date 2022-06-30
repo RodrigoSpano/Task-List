@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = [
   {
     title:'Create your first Task',
-    description: 'welcome to this web where you can create as many tasks as you like',
+    description: 'welcome to this website where you can create as many tasks as you like',
     completed: false,
     id: '1',
   }
