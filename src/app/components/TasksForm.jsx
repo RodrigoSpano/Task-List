@@ -49,8 +49,8 @@ export const TasksForm = () => {
       <Heading as='h2' color='gray.200' mb={5}>{params.id ? 'Edit Task✏' : 'Create Task✏'}</Heading>
       <chakra.form onSubmit={handleSubmit} display='flex' flexDirection='column' gap={5} w='auto' >
         <Flex direction={'row'} gap={5}>
-          <Input onChange={handleChange} name='title' bgColor='' placeholder='Title' _placeholder={{color: 'gray.100'}} />
-          <Textarea onChange={handleChange} name='description' placeholder='Task Description..' _placeholder={{color: 'gray.100'}}/>
+          <Input onChange={handleChange} name='title' bgColor='' placeholder='Title' _placeholder={{color: 'gray.100'}} value={task.title ? task.title : null} />
+          <Textarea onChange={handleChange} name='description' placeholder='Task Description..' _placeholder={{color: 'gray.100'}} value={task.description ? task.description : null} />
         </Flex>
         <Button type='submit' _hover={{color: 'gray.200', bgColor: 'gray.800'}}>Create</Button>
         <Link to={'/'}><Text color='gray.200'> ⬅Back </Text></Link>
